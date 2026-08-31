@@ -29,8 +29,8 @@ Siga os passos abaixo para clonar e executar o projeto na sua máquina:
 
 ```
 bash
-git clone https://github.com/RogerioFernandesSilva/mysite-com-python-e-django.git
-cd mysite-com-python-e-django
+git clone https://github.com/RogerioFernandesSilva/mysite
+cd mysite
 
 ```
 
