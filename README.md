@@ -25,6 +25,12 @@ Certifique-se de ter instalado em sua máquina:
 
 Siga os passos abaixo para clonar e executar o projeto na sua máquina:
 
+---
+
+## 📥 Como Rodar o Projeto Localmente
+
+Siga os passos abaixo para clonar e executar o projeto na sua máquina:
+
 ### 1. Clonar o repositório
 
 ```
@@ -106,9 +112,3 @@ Agora, abra o seu navegador e acesse: `[http://127.0.0.1:8000/](http://127.0.0.1
 3. Faça o commit das alterações (`git commit -m 'Adiciona nova feature'`)
 4. Faça o push para a branch (`git push origin feature/MinhaFeature`)
 5. Abra um **Pull Request**.
-
----
-
-## 📥 Como Rodar o Projeto Localmente
-
-Siga os passos abaixo para clonar e executar o projeto na sua máquina:
