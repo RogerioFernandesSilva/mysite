@@ -107,7 +107,7 @@ Agora, abra o seu navegador e acesse: `[http://127.0.0.1:8000/](http://127.0.0.1
 
 ## 🤝 Contribuindo
 
-1. Faça um Fork do projeto
+1. Faça um Fork do projeto;
 2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
 3. Faça o commit das alterações (`git commit -m 'Adiciona nova feature'`)
 4. Faça o push para a branch (`git push origin feature/MinhaFeature`)
