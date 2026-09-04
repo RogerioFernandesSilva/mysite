@@ -27,14 +27,6 @@ uvicorn mysite.asgi:application --reload
 | `/sync/`  | sync | Faz requisições HTTP de forma bloqueante                                    |
 | `/async/` | async| Dispara `http_call_async()` como task e responde na hora (fire-and-forget) |
 
-## Correções feitas no código enviado (Código 2 e 3)
-
-O "Código 3" da aula estava sem os `import`s (`asyncio`, `httpx`, `time`) e
-com uma indentação incorreta em `http_call_async`: o bloco
-`async with httpx.AsyncClient()` tinha saído de dentro da função por engano
-(ficava no mesmo nível do `for`, quebrando a função). Isso foi corrigido em
-`core/views.py`.
-
 ## Nova feature nesta branch: contador de tempo assíncrono
 
 | Rota                          | Tipo             | Descrição                                                                 |
