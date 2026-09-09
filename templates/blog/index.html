@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+    <h2>Bem-vindo(a) ao meu site!</h2>
+    <p>Este é um projeto Django com um blog simples.</p>
+    <p><a href="{% url 'blog:post_list' %}">Ver todos os posts →</a></p>
+{% endblock %}
