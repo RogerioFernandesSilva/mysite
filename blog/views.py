@@ -1,10 +1,16 @@
-from django.views.generic import ListView, TemplateView
+# blog/views.py
+from django.views.generic import ListView
 
 from blog.models import Post
 
 
-class IndexView(TemplateView):
+class IndexView(ListView):
+    model = Post
     template_name = "blog/index.html"
+    context_object_name = "ultimos_posts"
+
+    def get_queryset(self):
+        return Post.objects.filter(status=Post.STATUS_PUBLISHED)[:5]
 
 
 class PostListView(ListView):
