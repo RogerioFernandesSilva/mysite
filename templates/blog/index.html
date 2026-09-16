@@ -1,9 +1,25 @@
-{% extends 'blog/base.html' %}
+{% extends "blog/base.html" %}
 
 {% block title %}Início{% endblock %}
 
 {% block content %}
-    <h2>Bem-vindo(a) ao meu site!</h2>
-    <p>Este é um projeto Django com um blog simples.</p>
-    <p><a href="{% url 'blog:post_list' %}">Ver todos os posts →</a></p>
+<header class="masthead text-white text-center">
+    <h1>Bem-vindo(a) ao meu Blog!</h1>
+    <p>Confira os últimos posts publicados.</p>
+</header>
+
+<div class="container mt-4">
+    {% for post in ultimos_posts %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="card-text">{{ post.body|truncatewords:30 }}</p>
+            </div>
+        </div>
+    {% empty %}
+        <p>Nenhum post publicado ainda.</p>
+    {% endfor %}
+    <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Ver todos os posts →</a>
+</div>
 {% endblock %}

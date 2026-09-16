@@ -2,25 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Meu Site{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Meu Blog{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
-        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #222; }
-        header h1 a { text-decoration: none; color: #222; }
-        nav a { margin-right: 15px; }
+        body { font-family: "Roboto", sans-serif; background-color: #fdfdfd; }
+        .masthead { background: #3398E1; padding: 30px 0; box-shadow: 0 16px 48px #E3E7EB; }
+        .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="{% url 'blog:post_list' %}">Meu Site</a></h1>
-        <nav>
-            <a href="{% url 'blog:post_list' %}">Blog</a>
-        </nav>
-    </header>
-    <hr>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'blog:index' %}">Meu Site</a>
+            <a class="nav-link d-inline" href="{% url 'blog:post_list' %}">Blog</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="py-3 bg-light text-center mt-4">
+        <p class="m-0 text-muted">Meu Blog</p>
+    </footer>
 </body>
 </html>
